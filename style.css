@@ -53,7 +53,6 @@ body {
 #below-summary-section {
     line-height: 1.6;
     display: flex;
-    flex-wrap: wrap; /* Stacks Part 1 and Part 2 on mobile */
     gap: 30px;
 }
 
@@ -86,7 +85,6 @@ hr {
     background-color: rgb(6, 34, 75);
     border: none;
 }
-
 #work-exp, .inside-wrok-exp {
     line-height: 1.5;
 }
