@@ -1,0 +1,127 @@
+body {
+    background-image: linear-gradient(to right, #101916, #101511);
+    margin: 0;
+    padding: 0;
+}
+
+#a4-page {
+    /* Responsive width: 95% on small screens, max 210mm on large */
+    width: 95%;
+    max-width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    padding: 12mm;
+    background: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box; /* Critical for keeping padding inside the width */
+}
+
+#side-bar {
+    width: 8px;
+    height: 100px; /* Use px instead of vh for consistency */
+    margin-right: 20px;
+    background-color: rgb(5, 54, 122);
+}
+
+#top-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows name and contact to stack on mobile */
+}
+
+#name-opccupation {
+    line-height: 1.4;
+    flex: 1; /* Takes available space */
+}
+
+#contact-details {
+    margin-bottom: 20px;
+    margin-left: auto; /* Pushes to the right on desktop, aligns naturally on mobile */
+    min-width: 200px;
+}
+
+#contact-details a {
+    color: gray;
+    text-decoration: none;
+}
+
+#contact-details hr {
+    background-color: gray;
+    height: 1px;
+    border: none;
+}
+
+#below-summary-section {
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap; /* Stacks Part 1 and Part 2 on mobile */
+    gap: 30px;
+}
+
+#part-2 img {
+    height: auto;
+    width: 150px; /* Specific width is safer for responsive images */
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: larger;
+    color: rgb(6, 34, 75);
+}
+
+p, ul {
+    color: rgb(95, 93, 93);
+}
+
+ul {
+    margin-bottom: 20px;
+}
+
+h4, h5 {
+    line-height: 1.2;
+}
+
+hr {
+    height: 2px;
+    background-color: rgb(6, 34, 75);
+    border: none;
+}
+
+#work-exp, .inside-wrok-exp {
+    line-height: 1.5;
+}
+
+.inside-hr {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Updated horizontal rule sections to be responsive */
+.side-1-hr, .side-2-hr {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.side-1-hr hr, .side-2-hr hr {
+    flex-grow: 1; /* Lines now grow to fill space instead of fixed vh */
+    margin-left: 10px;
+}
+
+/* --- Mobile Specific Fixes --- */
+@media (max-width: 768px) {
+    #a4-page {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    #contact-details {
+        margin-left: 0; /* Resets the large left margin on phones */
+        width: 100%;
+    }
+
+    #side-bar {
+        display: none; /* Often cleaner to hide the accent bar on mobile */
+    }
+}
